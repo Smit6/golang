@@ -1,8 +1,9 @@
 # golang
-Learn golang
+Not object oriented
 
 
-# Go CLI
+
+### Go CLI
 
 - Compiles a bunch of go source code files
     ```
@@ -30,7 +31,7 @@ Learn golang
     ```
     $ go test
     ```
-# Package == Project == Workspace
+### Package == Project == Workspace
 - https://golang.org/pkg/
 - package name must be declared in every file of the package
     ```
@@ -45,9 +46,58 @@ Learn golang
         - Other than "main" creates reusable package
     
 
-# import "library name or resusable package name"
+### import "library name or resusable package name"
 - Imports library or reusable package
 - "fmt" is part of standard library
 
 
 
+### Types & Variable
+- Golang is strongly and statically typed.
+- Type is required
+- Basic types
+    - bool
+    - string
+    - int
+    - float64
+- :=
+    - card := "I'm a string"
+    - Asks compiler to figure out what type of variable is card.
+    - Only used when initializing a variable
+
+### Extended types
+- type deck[] string
+
+### Function
+- func func_name() return_type { ... }
+    - func newCard() string
+
+### Data structure
+- Array
+    - Fixed length list
+- Slice
+    - An array that can grow or shrink
+    - All elements must be of same type
+    - Initialize
+        - cards := []string{newCard(), newCard()}
+    - Append
+        - cards = append(cards, "Six of Spades")
+
+### Loop
+- Enumerate
+    - for i, card := range cards { ... }
+- Index
+    - for i := range d { ... }
+
+### Object Oriented
+- Receiver function
+    - func (d deck) print() { ... }
+    - Receivers sets up methods on variables that we create
+- Normal functions in same file for better visualization
+
+### Test
+- go mod init package_name
+- Test file should end with _test.go
+    - deck_test.go
+- To execute tests in a package
+    - go test
