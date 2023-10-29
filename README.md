@@ -101,3 +101,31 @@ Not object oriented
     - deck_test.go
 - To execute tests in a package
     - go test
+
+
+### Struct
+- example
+    ```
+    type person struct {
+        firstName string
+        lastName  string
+    }
+    ```
+
+### Value Types vs. Reference Types
+- Value Types
+    - Use pointers to change these things in a function
+    - Types
+        - int
+        - float
+        - string
+        - bool
+        - struct
+- Reference Types
+    - Don't worry about pointers with these
+    - Types
+        - slices
+        - maps
+        - channels
+        - pointers
+        - functions
