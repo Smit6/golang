@@ -158,3 +158,21 @@ Not object oriented
 		fmt.Println("Hex code for", color, "is", hex)
 	}
     ```
+
+
+### Interface
+- Example
+    ```
+    type bot interface {
+        getGreeting() string
+    }
+
+    func printGreeting(b bot) {
+        fmt.Println(b.getGreeting())
+    }
+    ```
+- Only applicable to types with a function definition of `getGreeting() string`
+- Interface `bot` can be leveraged by calling `printGreeting` function with type object which satisfies above condition.
+- Interfaces are not generic types
+- Interfaces are 'implicit'
+- Interfaces are a contract to help us manage types
