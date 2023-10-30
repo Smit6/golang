@@ -129,3 +129,32 @@ Not object oriented
         - channels
         - pointers
         - functions
+
+
+### Map
+- Initialization examples
+    - Simple initialization
+        ```
+        var colors map[int]string
+        ```
+    - Initialize with make
+        ```
+        colors := make(map[string]string)
+        ```
+    - Initialize with key value pairs
+        ```
+        colors := map[int]string{
+            1: "#ff0000",
+            2: "#4bf745",
+        }
+        ```
+- Delete key value pair
+    ```
+    delete(colors, "red")
+    ```
+- Iterate over map
+    ```
+    for color, hex := range c {
+		fmt.Println("Hex code for", color, "is", hex)
+	}
+    ```
